@@ -7,6 +7,7 @@
 ## MacOS 💻
 ```shell
 brew install terraform
+brew link terraform
 brew install --cask docker
 ```
 ## Windows 🪟
@@ -19,4 +20,8 @@ choco install docker-desktop
 terraform init
 terraform plan
 terraform apply
+```
+## Destroy Terraform configuration 💥
+```shell
+terraform destroy
 ```

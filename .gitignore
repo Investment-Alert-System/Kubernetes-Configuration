@@ -2,3 +2,6 @@
 .idea
 .vs_code
 .DS_Store
+.terraform.tfstate.lock.info
+terraform.tfstate
+terraform.tfstate.backup
