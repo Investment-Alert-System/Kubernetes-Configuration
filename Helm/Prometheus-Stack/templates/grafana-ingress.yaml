@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana-dashboard
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`grafana.{{ .Values.domain }}`)
+      kind: Rule
+      services:
+        - name: {{ .Release.Name }}-grafana
+          port: 80

@@ -1,0 +1,10 @@
+domain: localhost
+prometheus:
+  ingress:
+    tlsSecret: prometheus-tls-secret
+grafana:
+  ingress:
+    tlsSecret: grafana-tls-secret
+alertmanager:
+  ingress:
+    tlsSecret: alertmanager-tls-secret
