@@ -1,0 +1,1 @@
+UI = vault.localhost/ui
