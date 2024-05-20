@@ -1,0 +1,17 @@
+{{if .Values.routing.default.enabled -}}
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{.Values.fullNameOverride}}
+spec:
+  entryPoints:
+    - after-proxy
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.routing.default.host }}`)  && PathPrefix(`{{.Values.routing.default.path}}`)
+      services:
+        - kind: Service
+          name: {{.Values.fullNameOverride}}
+          namespace: {{.Release.Namespace}}
+          port: {{ .Values.service.port }}
+  {{- end }}

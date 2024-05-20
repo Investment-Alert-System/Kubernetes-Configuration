@@ -1,9 +1,9 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/Investment-Alert-System/stock-data-streamer/app
+  repository: ghcr.io/investment-alert-system/stock-data-streamer/app
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: "575250a97341c34b37e0ae9ac80b3268da87dc46"
 
 service:
   type: ClusterIP
