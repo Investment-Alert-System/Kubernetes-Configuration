@@ -7,4 +7,3 @@ variable "stage" {
     type = string
     description = "the stage of the environment, like dev, prod etc..."
 }
-
