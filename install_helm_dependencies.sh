@@ -5,7 +5,7 @@ helm dependency build
 cd ../..
 
 # Prometheus-Stack dependencies
-cd ./Helm/Prometheus-Stack
+cd ./Helm/prometheus-stack
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm dependency build
 cd ../..

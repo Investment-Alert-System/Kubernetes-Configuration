@@ -4,6 +4,7 @@ variable "microservices" {
   default = [
     "investment-alert-frontend",
     "stock-data-streamer",
-    "traefik"
+    "traefik",
+    "prometheus"
   ]
 }
