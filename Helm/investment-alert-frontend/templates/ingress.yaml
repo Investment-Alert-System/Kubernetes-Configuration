@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ include "project-launchpad.fullname" . }}
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`launchpad.{{ .Values.ingress.domain }}`)
+      kind: Rule
+      services:
+        - name: "{{.Release.Name}}-project-launchpad"
+          port: {{.Values.service.port}}
