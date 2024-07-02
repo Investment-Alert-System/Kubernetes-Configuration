@@ -9,6 +9,7 @@ resource "null_resource" "install_k3s" {
       "sudo k3s kubectl get nodes",
     ]
   }
+
 }
 
 
